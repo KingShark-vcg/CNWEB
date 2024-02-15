@@ -1,16 +1,16 @@
-@keyframes modalFaceIn{
-    from {
-        opacity: 0;
-        transform: translateY(-140px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes modalFaceIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.modal-content{
-    width: 1000px;
-    max-width: calc(100% - -662px);
-    height: 870px;
-    animation: modalFaceIn ease 0.5s;
+.modal-content {
+  width: 1000px;
+  max-width: calc(100% - -662px);
+  height: 870px;
+  animation: modalFaceIn ease 0.5s;
 }
