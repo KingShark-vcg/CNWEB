@@ -58,11 +58,11 @@ function Search_bar() {
 
   return (
     <div>
-      <div className="max-w-2xl">
+      <div className="max-w-2xl min-w-min">
         <input
           type="text"
           placeholder="Freeship đến 30k"
-          className="block pl-8 pr-7 border-none focus:outline-none w-96"
+          className="block pl-8 pr-7 border-none focus:outline-none w-96 max-sm:w-5/6"
           value={searchTerm}
           onChange={handleSearch}
           onFocus={() => {
@@ -78,26 +78,26 @@ function Search_bar() {
       </div>
       {(isInputFocused || isListFocused) && (
         <div
-          className="size-full mt-10 absolute mr-20 z-50"
+          className="size-full mt-10 absolute mr-20 z-50 max-sm:w-96"
           onMouseEnter={() => setIsListFocused(true)}
           onMouseLeave={() => setIsListFocused(false)}
         >
-          <div className="modal-content relative bg-white p-8 border-2 border-slate-400 rounded-lg overflow-y-auto">
+          <div className="modal-content relative right-5 bg-white p-8 border-2 border-slate-400 rounded-lg overflow-y-auto max-sm:w-fit max-sm:right-10">
             <div className="flex mb-7 relative">
-              <h1 className="text-black font-semibold text-2xl">
+              <h1 className="text-black font-semibold text-2xl max-sm:text-sm">
                 Hàng Nhập Khẩu
               </h1>
               <img
                 src="https://salt.tikicdn.com/cache/140x28/ts/tikimsp/25/17/c8/286164500c47bb55ae00b1d9bd90c990.png"
                 alt=""
-                className="absolute inset-y-0 right-0"
+                className="absolute inset-y-0 right-0 max-sm:hidden"
               />
             </div>
-            <ul className="text-black space-y-7">
+            <ul className="text-black space-y-7 ">
               {filteredBooks.map((book) => (
                 <li
                   key={book.id}
-                  className="space-x-2 overflow-hidden hover:bg-slate-500 h-12 flex items-center rounded-lg cursor-pointer text-xl"
+                  className="space-x-2 overflow-hidden hover:bg-slate-500 h-12 flex items-center rounded-lg cursor-pointer text-xl max-sm:text-sm"
                 >
                   <img
                     src="https://salt.tikicdn.com/ts/upload/e8/aa/26/42a11360f906c4e769a0ff144d04bfe1.png"
@@ -112,7 +112,7 @@ function Search_bar() {
               {!showAllSuggestions && books.length > 3 && (
                 <button
                   onClick={handleShowMore}
-                  className="text-blue-600 hover:bg-blue-200 rounded-md transition-all duration-300 ease-in-out hover:scale-105"
+                  className="text-blue-600 2xl:hover:bg-blue-200 rounded-md 2xl:transition-all 2xl:duration-300 2xl:ease-in-out 2xl:hover:scale-105"
                 >
                   Xem thêm
                 </button>

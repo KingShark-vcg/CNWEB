@@ -55,14 +55,14 @@ const Produc_modal = () => {
   return (
     <div className="mt-5 border-t-2 border-slate-400">
       <div className="mt-4">
-        <h1 className="text-2xl text-black font-semibold mb-4">
+        <h1 className="text-2xl text-black font-semibold mb-4 max-sm:text-sm">
           Danh mục nổi bật
         </h1>
-        <div className="grid grid-cols-4 gap-5 mt-3 space-y-5">
+        <div className="grid grid-cols-4 gap-5 mt-3 space-y-5 max-sm:grid max-sm:grid-cols-2">
           {products.map((product, index) => (
             <div
               key={index}
-              className="items-center space-x-4 hover:ease-in-out transition-all hover:scale-95 duration-300 cursor-pointer text-center content-center w-40 h-max"
+              className="items-center space-x-4 2xl:hover:ease-in-out 2xl:transition-all 2xl:hover:scale-95 2xl:duration-300 cursor-pointer text-center content-center w-40 h-max"
             >
               {product.img.map((img, img_index) => (
                 <img key={img_index} src={img} alt="" className="size-fit" />
